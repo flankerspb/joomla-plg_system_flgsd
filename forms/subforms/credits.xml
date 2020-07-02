@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<field
+		name="type"
+		label="FLGSD_TYPE"
+		type="list"
+		defauilt="author"
+		class="chzn-color-state"
+		required="true"
+		multiple="true"
+	>
+		<option value="author">author</option>
+		<option value="contributor">contributor</option>
+		<option value="copyrightHolder">copyrightHolder</option>
+		<option value="creator">creator</option>
+		<option value="editor">editor</option>
+		<option value="funder">funder</option>
+		<option value="producer">producer</option>
+		<option value="provider">provider</option>
+		<option value="publisher">publisher</option>
+		<option value="sponsor">sponsor</option>
+		<option value="translator">translator</option>
+	</field>
+	
+	<field
+		name="entity"
+		label="FLGSD_ENTITY"
+		type="list"
+		defauilt="Organization"
+		class="chzn-color-state"
+		required="true"
+	>
+		<option value="Organization">Organization</option>
+		<option value="Person">Person</option>
+	</field>
+	
+	<field
+		name="name"
+		label="FLGSD_NAME"
+		type="text"
+		required="true"
+	/>
+	
+	<field
+		name="url"
+		label="FLGSD_URL"
+		type="text"
+		required="true"
+	/>
+</form>

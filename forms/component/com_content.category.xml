@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	
+	<fields name="params">
+		
+		<fieldset name="seo" label="FLGSD_SEO">
+			
+			<fields name="social">
+			
+				<fields name="opengraph">
+					
+					<field type="note" label="FLGSD_OPENGRAPH" heading="h3" class="page-header"/>
+					
+					<field
+						name="type"
+						label="FLGSD_TYPE"
+						type="list"
+						defauilt="article"
+						class="chzn-color-state"
+					>
+						<option value="">- use global - </option>
+						<option value="article">article</option>
+						<option value="blog">blog</option>
+						<option value="website">website</option>
+					</field>
+					
+					<field
+						name="title"
+						label="FLGSD_TITLE"
+						type="text"
+					/>
+					
+					<field
+						name="description"
+						label="FLGSD_DESCRIPTION"
+						type="textarea"
+					/>
+					
+					<field
+						name="image"
+						label="FLGSD_IMAGE"
+						type="media"
+					/>
+					
+					
+				</fields>
+				
+			</fields>
+			
+		</fieldset>
+		
+	</fields>
+	
+</form>

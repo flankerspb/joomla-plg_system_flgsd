@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+<fields name="params">
+<fields name="global">
+	
+	<fields name="schemaorg">
+		
+		<fieldset name="schemaorg" label="FLGSD_SCHEMAORG">
+			
+			<fields name="breadcrumbs">
+				
+				<field type="note" label="FLGSD_BREADCRUMBS" />
+				
+				<field
+					name="enable"
+					label="JSTATUS"
+					type="list"
+					class="chzn-color-state"
+					default="0"
+				>
+					<option value="0">JOFF</option>
+					<option value="1">JON</option>
+				</field>
+				
+				<field
+					name="append_home"
+					label="FLGSD_APPEND_HOMEPAGE_ITEM"
+					description="FLGSD_APPEND_HOMEPAGE_ITEM_DESC"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					showon="enable:1"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="home_title"
+					label="FLGSD_APPEND_HOMEPAGE_TITLE"
+					type="list"
+					defauilt="sitename"
+					class="chzn-color-state"
+					showon="enable:1[AND]append_home:1"
+				>
+					<option value="sitename">FLGSD_SITENAME</option>
+					<option value="domain">FLGSD_DOMAIN</option>
+					<option value="custom">FLGSD_CUSTOM</option>
+				</field>
+				
+				<field
+					name="home_custom_title"
+					label="FLGSD_APPEND_HOMEPAGE_CUSTOM_TITLE"
+					type="text"
+					showon="enable:1[AND]home_title:custom[AND]append_home:1"
+				/>
+				
+				
+			</fields>
+			
+			<fields name="website">
+				
+				<field type="note" label="FLGSD_WEBSITE" />
+				
+				<field
+					name="enable"
+					label="JSTATUS"
+					type="list"
+					class="chzn-color-state"
+					default="0"
+				>
+					<option value="0">JOFF</option>
+					<option value="1">JON</option>
+				</field>
+				
+				<field
+					name="langs"
+					label="FLGSD_APPEND_LANGUAGES"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					showon="enable:1"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="alter_names"
+					label="FLGSD_ALTER_NAMES"
+					type="subform"
+					multiple="true"
+					layout ="joomla.form.field.subform.repeatable-table"
+					class="form-vertical"
+					showon="enable:1"
+				>
+					<form>
+						<field
+							name="value"
+							label="FLGSD_ALTER_NAMES"
+							type="text"
+							required="true"
+						/>
+					</form>
+				</field>
+				
+				<field
+					name="same_as"
+					label="FLGSD_SAMEAS"
+					type="subform"
+					multiple="true"
+					layout ="joomla.form.field.subform.repeatable-table"
+					class="form-vertical"
+					showon="enable:1"
+				>
+					<form>
+						<field
+							name="value"
+							label="FLGSD_SAMEAS"
+							type="text"
+							required="true"
+						/>
+					</form>
+				</field>
+				
+				<field
+					name="credits"
+					label="FLGSD_CREDITS"
+					type="subform"
+					formsource="plugins/system/flgsd/forms/subforms/credits.xml"
+					multiple="true"
+					layout ="joomla.form.field.subform.repeatable-table"
+					class="form-vertical"
+					showon="enable:1"
+				/>
+				
+			</fields>
+			
+			<fields name="entity">
+				
+				<field type="note" label="FLGSD_SITE_ENTITY" />
+				
+				<field
+					name="enable"
+					label="JSTATUS"
+					type="list"
+					class="chzn-color-state"
+					default="0"
+				>
+					<option value="0">JOFF</option>
+					<option value="1">JON</option>
+				</field>
+				
+				<field
+					name="ignore_contacts"
+					label="FLGSD_IGNORE_CONTACTS"
+					description="FLGSD_IGNORE_CONTACTS_DESC"
+					type="list"
+					defauilt="0"
+					showon="enable:1"
+				>
+					<option value="">JNO</option>
+					<option value="current">FLGSD_IGNORE_CURRENT_ONLY</option>
+					<option value="contacts">FLGSD_IGNORE_CONTACTS_ONLY</option>
+					<option value="all">FLGSD_IGNORE_ALL</option>
+				</field>
+				
+				<field
+					name="cid"
+					label="FLGSD_CONTACT"
+					type="sql"
+					default="1"
+					query="SELECT id, name FROM #__contact_details ORDER BY id ASC"
+					key_field="id" 
+					value_field="name"
+					showon="enable:1"
+				/>
+				
+				<field
+					name="type"
+					label="FLGSD_TYPE"
+					type="list"
+					showon="enable:1"
+				>
+					<option value="Organization">Organization</option>
+					<option value="Person">Person</option>
+				</field>
+				
+				<field
+					name="Organization"
+					label="FLGSD_ADDITIONAL_TYPES"
+					type="list"
+					multiple="true"
+					showon="enable:1[AND]type:Organization"
+				>
+					<option value="Airline">Airline</option>
+					<option value="Consortium">Consortium</option>
+					<option value="Corporation">Corporation</option>
+					<option value="EducationalOrganization">EducationalOrganization</option>
+					<option value="FundingScheme">FundingScheme</option>
+					<option value="GovernmentOrganization">GovernmentOrganization</option>
+					<option value="LibrarySystem">LibrarySystem</option>
+					<option value="LocalBusiness">LocalBusiness</option>
+					<option value="MedicalOrganization">MedicalOrganization</option>
+					<option value="NGO">NGO</option>
+					<option value="NewsMediaOrganization">NewsMediaOrganization</option>
+					<option value="PerformingGroup">PerformingGroup</option>
+					<option value="Project">Project</option>
+					<option value="SportsOrganization">SportsOrganization</option>
+					<option value="WorkersUnion">WorkersUnion</option>
+				</field>
+				
+				<field
+					name="image"
+					label="FLGSD_IMAGE"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					showon="enable:1"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="logo"
+					label="FLGSD_LOGO"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					showon="enable:1[AND]type:Organization"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="address"
+					label="FLGSD_APPEND_ADDRESS"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					showon="enable:1"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="phones"
+					label="FLGSD_APPEND_PHONES"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					showon="enable:1"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="pages"
+					label="FLGSD_MAINENTITYOFPAGE"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					showon="enable:1"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="links"
+					label="FLGSD_SAMEAS"
+					type="list"
+					class="chzn-color-state"
+					multiple="true"
+					showon="enable:1"
+				>
+					<option value="webpage">FLGSD_CONTACT_WEBPAGE</option>
+					<option value="links">FLGSD_CONTACT_LINKS</option>
+				</field>
+				
+			</fields>
+			
+		</fieldset>
+	
+	</fields>
+	
+</fields>
+</fields>
+</form>

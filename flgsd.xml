@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.7" type="plugin" group="system" method="upgrade">
+	<name>[FL] Global Structured Data</name>
+	<author>Vitaliy Moskalyuk</author>
+	<creationDate>July 2018</creationDate>
+	<copyright>Copyright © 2018 Vitaliy Moskalyuk All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<authorEmail>info@2sweb.ru</authorEmail>
+	<authorUrl>http://2sweb.ru</authorUrl>
+	<version>2.1.0</version>
+	<description>PLG_SYSTEM_FLGSD_DESC</description>
+	
+	<files>
+		<filename plugin="flgsd">flgsd.php</filename>
+		<folder>forms</folder>
+		<folder>language</folder>
+		<folder>models</folder>
+	</files>
+	
+	<languages>
+		<language tag="en-GB">en-GB.plg_system_flgsd.ini</language>
+		<language tag="en-GB">en-GB.plg_system_flgsd.sys.ini</language>
+	</languages>
+	
+	<config>
+		
+		<field
+			name="plg_system_flgsd"
+			type="hidden"
+			default="true"
+		/>
+		
+	</config>
+	
+</extension>

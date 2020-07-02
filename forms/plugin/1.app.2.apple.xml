@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fields name="params">
+		<fields name="app">
+			<fieldset name="app" label="FLGSD_APP">
+			
+				<fields name="apple">
+					
+					<field type="hidden" name="state" />
+					
+					<field type="note" label="FLGSD_APPLE" />
+					
+					<field
+						name="icon"
+						label="apple-touch-icon"
+						type="media"
+						required="true"
+					/>
+					
+					<field
+						name="mask_icon"
+						label="mask-icon"
+						type="media"
+					/>
+					
+					<field
+						name="color"
+						label="color"
+						type="color"
+						showon="mask_icon!:"
+					/>
+					
+					<field
+						name="title"
+						label="apple-mobile-web-app-title"
+						type="text"
+					/>
+					
+					<field
+						name="startup_image"
+						label="startup-image"
+						type="media"
+					/>
+					
+				</fields>
+			
+			</fieldset>
+		</fields>
+	</fields>
+</form>

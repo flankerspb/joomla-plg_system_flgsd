@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+<fields name="params">
+	
+	<fields name="component">
+	
+		<fieldset name="content" label="FLGSD_COMCONTENT">
+			
+			<fields name="content">
+				
+				<field
+					name="append_home"
+					label="FLGSD_APPEND_HOMEPAGE_ITEM"
+					description="FLGSD_APPEND_HOMEPAGE_ITEM_DESC"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="home_title"
+					label="FLGSD_APPEND_HOMEPAGE_TITLE"
+					type="list"
+					defauilt="sitename"
+					class="chzn-color-state"
+					showon="append_home:1"
+				>
+					<option value="sitename">FLGSD_SITENAME</option>
+					<option value="domain">FLGSD_DOMAIN</option>
+					<option value="custom">FLGSD_CUSTOM</option>
+				</field>
+				
+				<field
+					name="home_custom_title"
+					label="FLGSD_APPEND_HOMEPAGE_CUSTOM_TITLE"
+					type="text"
+					showon="home_title:custom[AND]append_home:1"
+				/>
+				
+				
+			</fields>
+			
+		</fieldset>
+		
+	</fields>
+	
+</fields>
+</form>

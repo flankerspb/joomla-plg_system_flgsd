@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fields name="params">
+		<fields name="schemaorg">
+			<fields name="website">
+				
+				<fieldset name="schemaorg" label="FLGSD_SCHEMAORG">
+					
+					<field type="hidden" name="state" />
+					
+					<field type="note" label="FLGSD_WEBSITE" />
+					
+					<field
+						name="langs"
+						label="FLGSD_APPEND_LANGUAGES"
+						type="radio"
+						class="btn-group btn-group-yesno"
+						default="0"
+						showon="enable:1"
+					>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					
+					<field
+						name="alter_names"
+						label="FLGSD_ALTER_NAMES"
+						type="subform"
+						multiple="true"
+						layout ="joomla.form.field.subform.repeatable-table"
+						class="form-vertical"
+						showon="enable:1"
+					>
+						<form>
+							<field
+								name="value"
+								label="FLGSD_ALTER_NAMES"
+								type="text"
+								required="true"
+							/>
+						</form>
+					</field>
+					
+					<field
+						name="same_as"
+						label="FLGSD_SAMEAS"
+						type="subform"
+						multiple="true"
+						layout ="joomla.form.field.subform.repeatable-table"
+						class="form-vertical"
+						showon="enable:1"
+					>
+						<form>
+							<field
+								name="value"
+								label="FLGSD_SAMEAS"
+								type="text"
+								required="true"
+							/>
+						</form>
+					</field>
+					
+					<field
+						name="credits"
+						label="FLGSD_CREDITS"
+						type="subform"
+						formsource="plugins/system/flgsd/forms/subforms/credits.xml"
+						multiple="true"
+						layout ="joomla.form.field.subform.repeatable-table"
+						class="form-vertical"
+						showon="enable:1"
+					/>
+					
+				</fieldset>
+				
+			</fields>
+		</fields>
+	</fields>
+</form>

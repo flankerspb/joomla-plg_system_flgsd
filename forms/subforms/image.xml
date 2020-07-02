@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<field
+		name="src"
+		label="FLGSD_IMAGE_SRC"
+		type="media"
+		required="true"
+	/>
+	<field
+		name="alt"
+		label="FLGSD_IMAGE_ALT"
+		type="text"
+	/>
+</form>

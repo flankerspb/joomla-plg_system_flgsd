@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+<fields name="params">
+	
+	<fields name="global">
+		
+		<fieldset name="webmanifest" label="FLGSD_WEBMANIFEST">
+		
+			<fields name="webmanifest">
+				
+				<field
+					name="file"
+					label="FLGSD_FILE"
+					type="text"
+					default="/manifest.webmanifest"
+				/>
+				
+				<field
+					name="name"
+					label="FLGSD_NAME"
+					type="text"
+					required="true"
+				/>
+				
+				<field
+					name="short_name"
+					label="FLGSD_SHORT_NAME"
+					type="text"
+				/>
+				
+				<field
+					name="description"
+					label="FLGSD_DESCRIPTION"
+					type="textarea"
+				/>
+				
+				<field
+					name="lang"
+					label="FLGSD_LANG"
+					type="sql"
+					query="SELECT lang_code, title FROM ms_languages WHERE published=1 ORDER BY title ASC"
+					key_field="lang_code" 
+					value_field="title"
+				>
+					<option value="">JOPTION_DO_NOT_USE</option>
+				</field>
+				
+				<field
+					name="start_url"
+					label="FLGSD_START_URL"
+					type="text"
+					default="."
+				/>
+				
+				<field
+					name="scope"
+					label="FLGSD_SCOPE"
+					type="text"
+				/>
+				
+				<field
+					name="categories"
+					label="FLGSD_CATEGORIES"
+					type="list"
+					multiple="true"
+				>
+					<option value="books">books</option>
+					<option value="business">business</option>
+					<option value="education">education</option>
+					<option value="entertainment">entertainment</option>
+					<option value="finance">finance</option>
+					<option value="fitness">fitness</option>
+					<option value="food">food</option>
+					<option value="games">games</option>
+					<option value="government">government</option>
+					<option value="health">health</option>
+					<option value="kids">kids</option>
+					<option value="lifestyle">lifestyle</option>
+					<option value="magazines">magazines</option>
+					<option value="medical">medical</option>
+					<option value="music">music</option>
+					<option value="navigation">navigation</option>
+					<option value="news">news</option>
+					<option value="personalization">personalization</option>
+					<option value="photo">photo</option>
+					<option value="politics">politics</option>
+					<option value="productivity">productivity</option>
+					<option value="security">security</option>
+					<option value="shopping">shopping</option>
+					<option value="social">social</option>
+					<option value="sports">sports</option>
+					<option value="travel">travel</option>
+					<option value="utilities">utilities</option>
+					<option value="weather">weather</option>
+				</field>
+				
+				<field
+					name="orientation"
+					label="FLGSD_ORIENTATION"
+					type="list"
+					default="any"
+				>
+					<option value="">JOPTION_DO_NOT_USE</option>
+					<option value="any">FLGSD_ORIENTATION_ANY</option>
+					<option value="natural">FLGSD_ORIENTATION_NATURAL</option>
+					<option value="landscape">FLGSD_ORIENTATION_LANDSCAPE</option>
+					<option value="landscape-primary">FLGSD_ORIENTATION_LANDSCAPE_PRIMARY</option>
+					<option value="landscape-secondary">FLGSD_ORIENTATION_LANDSCAPE_SECONDARY</option>
+					<option value="portrait">FLGSD_ORIENTATION_PORTRAIT</option>
+					<option value="portrait-primary">FLGSD_ORIENTATION_PORTRAIT_PRIMARY</option>
+					<option value="portrait-secondary">FLGSD_ORIENTATION_PORTRAIT_SECONDARY</option>
+				</field>
+				
+				<field
+					name="display"
+					label="FLGSD_DISPLAY"
+					type="list"
+					default="standalone"
+				>
+					<option value="">JOPTION_DO_NOT_USE</option>
+					<option value="fullscreen">FLGSD_DISPLAY_FULLSCREEN</option>
+					<option value="standalone">FLGSD_DISPLAY_STANDALONE</option>
+					<option value="minimal-ui">FLGSD_DISPLAY_MINIMAL_UI</option>
+					<option value="browser">FLGSD_DISPLAY_BROWSER</option>
+				</field>
+				
+				<field
+					name="background_color"
+					label="FLGSD_BACKGROUND_COLOR"
+					type="color"
+				/>
+				
+				<field
+					name="theme_color"
+					label="FLGSD_THEME_COLOR"
+					type="color"
+				/>
+				
+				<field
+					name="icons"
+					label="FLGSD_ICONS"
+					type="subform"
+					layout="joomla.form.field.subform.repeatable-table"
+					multiple="true"
+					min="1"
+				>
+					<form>
+						<field
+							name="src"
+							label="FLGSD_IMAGE_SRC"
+							type="media"
+							required="true"
+						/>
+						<field
+							name="sizes"
+							label="FLGSD_IMAGE_SIZES"
+							type="text"
+						/>
+						<field
+							name="purpose"
+							label="FLGSD_IMAGE_PURPOSE"
+							type="list"
+								>
+							<option value="">any</option>
+							<option value="badge">badge</option>
+							<option value="maskable">maskable</option>
+						</field>
+					</form>
+				</field>
+				
+				<field
+					name="screenshots"
+					label="FLGSD_SCREENSHOTS"
+					type="subform"
+					layout="joomla.form.field.subform.repeatable-table"
+					multiple="true"
+				>
+					<form>
+						<field
+							name="src"
+							label="FLGSD_IMAGE"
+							type="media"
+							required="true"
+						/>
+					</form>
+				</field>
+				
+				<field
+					name="related_applications"
+					label="FLGSD_RELATED_APPLICATIONS"
+					type="subform"
+					layout="joomla.form.field.subform.repeatable-table"
+					multiple="true"
+				>
+					<form>
+						<field
+							name="platform"
+							label="FLGSD_PLATFORM"
+							type="list"
+							required="true"
+						>
+							<option value="chrome_web_store">Google Chrome Web Store</option>
+							<option value="play">Google Play Store</option>
+							<option value="itunes">iTunes App Store</option>
+							<option value="windows">Windows App Store</option>
+						</field>
+						<field
+							name="url"
+							label="FLGSD_URL"
+							type="text"
+							required="true"
+						/>
+					</form>
+				</field>
+				
+				<field
+					name="prefer_related_applications"
+					label="FLGSD_PREFER_RELATED_APPLICATIONS"
+					type="radio"
+					class="btn-group btn-group-yesno"
+				>
+					<option value="">JNO</option>
+					<option value="true">JYES</option>
+				</field>
+				
+				<field
+					name="iarc_rating_id"
+					label="FLGSD_IARC_RATING_ID"
+					type="text"
+				/>
+				
+			</fields>
+			
+		</fieldset>
+		
+	</fields>
+	
+</fields>
+</form>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fields name="params">
+		<fields name="app">
+			<fieldset name="app" label="FLGSD_APP">
+			
+				<fields name="basic">
+					
+					<field type="hidden" name="state" />
+					
+					<field type="note" label="FLGSD_APP_BASIC" />
+					
+					<field
+						name="icons"
+						label="FLGSD_ICONS"
+						type="subform"
+						layout="joomla.form.field.subform.repeatable-table"
+						multiple="true"
+					>
+						<form>
+							<field
+								name="src"
+								label="FLGSD_SRC"
+								type="media"
+								required="true"
+							/>
+						</form>
+					</field>
+					
+					<field
+						name="app_name"
+						label="application-name"
+						type="text"
+					/>
+					
+				</fields>
+			
+			</fieldset>
+		</fields>
+	</fields>
+</form>

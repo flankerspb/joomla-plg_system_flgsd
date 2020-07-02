@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<field
+		name="type"
+		label="JTYPE"
+		type="list"
+		defauilt="Organization"
+		class="chzn-color-state"
+		required="true"
+		multiple="true"
+	>
+		<option value="author">author</option>
+		<option value="creator">creator</option>
+		<option value="editor">editor</option>
+	</field>
+	
+	<field
+		name="entity"
+		label="JAUTHOR"
+		type="list"
+		defauilt="Organization"
+		class="chzn-color-state"
+		required="true"
+	>
+		<option value="Organization">Organization</option>
+		<option value="Person">Person</option>
+	</field>
+	
+	<field
+		name="name"
+		label="JFIELD_NAME_LABEL"
+		type="text"
+		required="true"
+	/>
+	
+	<field
+		name="url"
+		label="FLGSD_URL"
+		type="text"
+		required="true"
+	/>
+</form>

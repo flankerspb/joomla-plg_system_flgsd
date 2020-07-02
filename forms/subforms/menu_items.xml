@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="item" label="JGLOBAL_TITLE" class="form-vertical">
+	<field
+		name="item"
+		type="menuitem"
+		label="FLGSD_MENUITEM"
+		published="1"
+		hiddenLabel="true"
+	/>
+	</fieldset>
+	<fieldset name="title" label="JGLOBAL_TITLE" class="form-vertical">
+		<field
+			name="title"
+			label="JGLOBAL_TITLE"
+			type="list"
+			defauilt="sitename"
+			class="chzn-color-state"
+			hiddenLabel="true"
+		>
+			<option value="title">JGLOBAL_TITLE</option>
+			<option value="page_title">PLG_PAGE_TITLE</option>
+			<option value="page_heading">FLGSD_PAGE_HEADING</option>
+			<option value="custom">FLGSD_CUSTOM</option>
+		</field>
+		
+		
+		
+		<field
+			name="custom_title"
+			type="text"
+			label="JGLOBAL_TITLE"
+			showon="title:custom"
+			hiddenLabel="true"
+		/>
+	</fieldset>
+	
+</form>

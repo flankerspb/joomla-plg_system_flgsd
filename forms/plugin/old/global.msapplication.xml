@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+<fields name="params">
+	
+	<fieldset name="msapplication" label="FLGSD_MSAPPLICATION">
+	
+	<fields name="global">
+			
+			<fields name="msapplication">
+				
+				<field
+					name="file"
+					label="FLGSD_FILE"
+					type="text"
+					default="browserconfig.xml"
+				/>
+				
+				<fields name="tile">
+					
+					<field
+						name="small"
+						label="square70x70logo"
+						type="media"
+						required="true"
+					/>
+					<field
+						name="medium"
+						label="square150x150logo"
+						type="media"
+						required="true"
+					/>
+					<field
+						name="large"
+						label="square310x310logo"
+						type="media"
+						required="true"
+					/>
+					<field
+						name="wide"
+						label="wide310x150logo"
+						type="media"
+						required="true"
+					/>
+					
+					<field
+						name="color"
+						label="FLGSD_TILE_COLOR"
+						type="color"
+						required="true"
+					/>
+					
+				</fields>
+				
+			</fields>
+			
+		
+		
+	</fields>
+	
+	</fieldset>
+	
+</fields>
+</form>

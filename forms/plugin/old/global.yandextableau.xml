@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+<fields name="params">
+	
+	<fields name="global">
+		
+		<fieldset name="yandextableau" label="FLGSD_YANDEXTABLEAU">
+		
+			<fields name="yandextableau">
+				
+				<field
+					name="logo"
+					label="FLGSD_LOGO"
+					type="media"
+					required="true"
+				/>
+				
+				<field
+					name="color"
+					label="FLGSD_COLOR"
+					type="color"
+					required="true"
+				/>
+				
+				<field
+					name="feed"
+					label="FLGSD_FEED"
+					type="text"
+					default=""
+					readonly="readonly"
+				/>
+				
+				<field
+					name="mode"
+					label="FLGSD_MODE"
+					type="list"
+					readonly="readonly"
+					default="tag"
+				>
+					<option value="tag">tag</option>
+					<option value="json">json</option>
+				</field>
+				
+			</fields>
+			
+		</fieldset>
+		
+	</fields>
+	
+	</fields>
+</form>

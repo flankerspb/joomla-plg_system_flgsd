@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fields name="params">
+		<fields name="app">
+			<fieldset name="app" label="FLGSD_APP">
+			
+				<fields name="msapplication">
+					
+					<field type="hidden" name="state" />
+					
+					<field type="note" label="FLGSD_MSAPPLICATION" />
+					
+					<fields name="tile">
+						
+						<field
+							name="small"
+							label="square70x70logo"
+							type="media"
+							required="true"
+						/>
+						<field
+							name="medium"
+							label="square150x150logo"
+							type="media"
+							required="true"
+						/>
+						<field
+							name="large"
+							label="square310x310logo"
+							type="media"
+							required="true"
+						/>
+						<field
+							name="wide"
+							label="wide310x150logo"
+							type="media"
+							required="true"
+						/>
+						
+						<field
+							name="color"
+							label="FLGSD_TILE_COLOR"
+							type="color"
+							required="true"
+						/>
+						
+					</fields>
+					
+				</fields>
+			
+			</fieldset>
+		</fields>
+	</fields>
+</form>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fields name="params">
+		<fields name="schemaorg">
+			<fields name="entity">
+				
+				<fieldset name="schemaorg" label="FLGSD_SCHEMAORG">
+					
+					<field type="hidden" name="state" />
+					
+					<field type="note" label="FLGSD_SITE_ENTITY" />
+					
+					<field
+						name="ignore_contacts"
+						label="FLGSD_IGNORE_CONTACTS"
+						description="FLGSD_IGNORE_CONTACTS_DESC"
+						type="list"
+						defauilt="0"
+						showon="enable:1"
+					>
+						<option value="">JNO</option>
+						<option value="current">FLGSD_IGNORE_CURRENT_ONLY</option>
+						<option value="contacts">FLGSD_IGNORE_CONTACTS_ONLY</option>
+						<option value="all">FLGSD_IGNORE_ALL</option>
+					</field>
+					
+					<field
+						name="cid"
+						label="FLGSD_CONTACT"
+						type="sql"
+						default="1"
+						query="SELECT id, name FROM #__contact_details ORDER BY id ASC"
+						key_field="id" 
+						value_field="name"
+						showon="enable:1"
+					/>
+					
+					<field
+						name="type"
+						label="FLGSD_TYPE"
+						type="list"
+						showon="enable:1"
+					>
+						<option value="Organization">Organization</option>
+						<option value="Person">Person</option>
+					</field>
+					
+					<field
+						name="Organization"
+						label="FLGSD_ADDITIONAL_TYPES"
+						type="list"
+						multiple="true"
+						showon="enable:1[AND]type:Organization"
+					>
+						<option value="Airline">Airline</option>
+						<option value="Consortium">Consortium</option>
+						<option value="Corporation">Corporation</option>
+						<option value="EducationalOrganization">EducationalOrganization</option>
+						<option value="FundingScheme">FundingScheme</option>
+						<option value="GovernmentOrganization">GovernmentOrganization</option>
+						<option value="LibrarySystem">LibrarySystem</option>
+						<option value="LocalBusiness">LocalBusiness</option>
+						<option value="MedicalOrganization">MedicalOrganization</option>
+						<option value="NGO">NGO</option>
+						<option value="NewsMediaOrganization">NewsMediaOrganization</option>
+						<option value="PerformingGroup">PerformingGroup</option>
+						<option value="Project">Project</option>
+						<option value="SportsOrganization">SportsOrganization</option>
+						<option value="WorkersUnion">WorkersUnion</option>
+					</field>
+					
+					<field
+						name="image"
+						label="FLGSD_IMAGE"
+						type="radio"
+						class="btn-group btn-group-yesno"
+						default="0"
+						showon="enable:1"
+					>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					
+					<field
+						name="logo"
+						label="FLGSD_LOGO"
+						type="radio"
+						class="btn-group btn-group-yesno"
+						default="0"
+						showon="enable:1[AND]type:Organization"
+					>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					
+					<field
+						name="address"
+						label="FLGSD_APPEND_ADDRESS"
+						type="radio"
+						class="btn-group btn-group-yesno"
+						default="0"
+						showon="enable:1"
+					>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					
+					<field
+						name="phones"
+						label="FLGSD_APPEND_PHONES"
+						type="radio"
+						class="btn-group btn-group-yesno"
+						default="0"
+						showon="enable:1"
+					>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					
+					<field
+						name="pages"
+						label="FLGSD_MAINENTITYOFPAGE"
+						type="radio"
+						class="btn-group btn-group-yesno"
+						default="0"
+						showon="enable:1"
+					>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					
+					<field
+						name="links"
+						label="FLGSD_SAMEAS"
+						type="list"
+						class="chzn-color-state"
+						multiple="true"
+						showon="enable:1"
+					>
+						<option value="webpage">FLGSD_CONTACT_WEBPAGE</option>
+						<option value="links">FLGSD_CONTACT_LINKS</option>
+					</field>
+					
+				</fieldset>
+				
+			</fields>
+		</fields>
+	</fields>
+</form>
+
